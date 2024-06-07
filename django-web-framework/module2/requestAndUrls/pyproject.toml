@@ -1,0 +1,9 @@
+[tool.pylint.MAIN]
+init-hook = """
+try: import pylint_venv
+except ImportError: pass
+else: pylint_venv.inithook()
+"""
+
+[tool.pylint."MESSAGES CONTROL"]
+disable = ["C0111", "C0103"]
